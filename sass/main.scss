@@ -1,0 +1,94 @@
+$color-primary: #193D64;
+$color-primary-light: #295B93;
+$color-primary-dark: #091725;
+
+$color-white: #fff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777; 
+    padding: 20px; /*20px around entire body*/
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /*xy, xy, xy, xy, xy*/
+    clip-path: polygon(0 0, 0 100%, 30% 100%,100% 70%,100% 0);
+}
+
+.header__logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.header__logo{
+    height: 35px;
+}
+
+.header__text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.heading__primary{
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+
+.heading__primary--main{
+    display: block;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 30px;
+}
+
+.heading__primary--sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 15px;
+}
+
+.btn:link, .btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 100px;
+    transition: all .2s; /* apllies to all button's transform property */
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, .4);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+.btn--white{
+    background-color: $color-white;
+    color: #777;
+}
+
